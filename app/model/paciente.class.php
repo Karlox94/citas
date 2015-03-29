@@ -6,7 +6,7 @@ require_once 'database.class.php';
 
 class paciente extends database{
 	
-	function insertar($datos){
+	public function insertar($datos){
 		conectar();
 
 		$campos="";
@@ -23,16 +23,16 @@ class paciente extends database{
 		    $valores = $valores.','."'".$valor."'";	  
 		  }	   
 		}
-	    $sql = "insert into paciente (".$campos.") values (".$valores.")";
+	    $sql = "INSERT INTO paciente (".$campos.") VALUES (".$valores.")";
 
 	    desconectar();
 		
 		return $ejecutar($sql);
 	}
 
-	function consultar(){
+	public function consultar(){
 		conectar();		
-		$sql = "select * from paciente";
+		$sql = "SELECT * FROM paciente";
 		desconectar();
 		$do = $ejecutar($sql);
 		while ($datos = $vectorDatos($do)) {
@@ -42,16 +42,16 @@ class paciente extends database{
 		return $dato;
 	}
 
-	function eliminar($dni){
+	public function eliminar($dni){
 		conectar();
-		$sql = "delete * from paciente where dni=".$dni;
+		$sql = "DELETE * FROM paciente WHERE dni=".$dni;
 		desconectar();
 		$ejecutar($sql);
 
 		return "datos eliminados para el usuario con dni = ".$dni;
 	}
 
-	function modificar($datos, $id){
+	public function modificar($datos, $id){
 		conectar();
 
 		$campos="";

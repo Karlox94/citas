@@ -6,7 +6,7 @@ class database{
 
 	private $conexion;
 	
-	function conectar(){
+	public function conectar(){
 		try {
 			$conexion = new PDO('pgsql:host=localhost;port=5432;dbname=postgres','postgres','casalcedo94');
 			$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -17,29 +17,28 @@ class database{
 		}
 	}
 
-	function ejecutar($sql){
+	public function ejecutar($sql){
 		$preparar = $conexion->prepare($sql);	
 		$consulta = $preparar->execute();
 
 		return $consulta;
 	}
 
-	function contar($consulta){
+	public function contar($consulta){
 		$cantidad_registro = $consulta->rowCount();
 
 		return $cantidad_registro;
 	}
 
-	function vectorDatos($consulta){
+	public function vectorDatos($consulta){
 		$datos = $consulta->fetch();
 
 		return $datos;
 	}
 
-	function desconectar(){
+	public function desconectar(){
 		$conexion = null;
 	}
 }
- 
 
 ?>
