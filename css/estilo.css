@@ -5,6 +5,12 @@
 	padding: 5px 20px 20px 20px;
 }
 
+.division{
+ 	border-top: 1px solid lightgray;
+ 	margin-top: 10px;
+ 	padding-top: 10px;
+ }
+
 #tiposangre, #telefono, #eps, #especialidad{ 
    display:none; 
  }

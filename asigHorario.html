@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="login.html">Iniciar sesion</a>
+                    <a href="login.html">Inicio</a>
                 </li>
                 <li>
                     <a href="admin.html">Administrador</a>
@@ -58,53 +58,47 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 login">
-                        <h1>Registrar datos de usuario</h1>
+                        <h1>Asignar horario</h1>
                         <form role="form" name="formUser">
                           <div class="form-group">
-                            <label>Documento de identidad</label>
-                            <input type="text" class="form-control" id="dni"
-                                   placeholder="Cedula o Tarjeta de identidad">
-                          </div>
-                          <div class="form-group">
-                            <label>Nombres</label>
-                            <input type="password" class="form-control" id="clave" 
-                                   placeholder="Primer y segundo nombre">
-                          </div>
-                          <div class="form-group">
-                            <label>Apellidos</label>
-                            <input type="password" class="form-control" id="clave" 
-                                   placeholder="Primer y segundo apellido">
-                          </div>
-                          <div class="form-group">
-                            <label>Tipo de usuario</label>
+                            <label>Seleccione dia</label>
+                            <div class="radio-inline">                              
+                                <input type="radio" value="0" name="dia">Lunes                    
+                            </div>
                             <div class="radio-inline">
-                              <input type="radio" value="medico" name="tipo" onclick="mostrarReferencia();">Medico
-                            </div>             
-							              <div class="radio-inline">
-                              <input type="radio" value="paciente" name="tipo" onclick="mostrarReferencia();">Paciente
-                            </div> 
-						              </div>
-                          <div class="form-group" id="telefono">
-                            <label>Telefono</label>
-                            <input type="password" class="form-control" id="clave" 
-                                   placeholder="Telefono">
+                                <input type="radio" value="1" name="dia">Martes
+                            </div>
+                            <div class="radio-inline">
+                                <input type="radio" value="2" name="dia">Miercoles
+                            </div>
+                            <div class="radio-inline">
+                                <input type="radio" value="3" name="dia">Jueves
+                            </div>
+                            <div class="radio-inline">
+                                <input type="radio" value="4" name="dia">Viernes
+                            </div>
+                            <div class="radio-inline">
+                                <input type="radio" value="5" name="dia">Sábado
+                            </div>                     
                           </div>
-                          <div class="form-group" id="tiposangre">
-                            <label>Tipo de sangre</label>
-                            <input type="password" class="form-control" id="clave" 
-                                   placeholder="Tipo sangre">
+                          <div class="form-group">
+                            <label>Seleccione medico</label>
+                            <select class="form-control">
+                              <option value="0">Medico 0</option>
+                              <option value="1">Medico 1</option>
+                              <option value="2">Medico 2</option>
+                              <option value="3">Medico 3</option>
+                            </select>
                           </div>
-                          <div class="form-group" id="eps">
-                            <label>E.P.S.</label>
-                            <input type="password" class="form-control" id="clave" 
-                                   placeholder="E.P.S.">
+                          <div class="form-group">
+                            <label>Seleccione fecha</label>
+                            <input type="date" class="form-control ">
                           </div>
-                          <div class="form-group" id="especialidad">
-                            <label>Especialidad</label>
-                            <input type="password" class="form-control" id="clave" 
-                                   placeholder="Medicina general o Odontologia">
+                          <div class="form-group">
+                            <label>Seleccione hora</label>
+                            <input type="time" class="form-control ">
                           </div>
-                          <button type="submit" class="btn btn-success">Enviar</button>
+                          <button type="submit" class="btn btn-success">Asignar</button>               
                         </form>
                         <br>
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Ocultar menú</a>
